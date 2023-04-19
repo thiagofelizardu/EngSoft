@@ -13,10 +13,6 @@ public class SistemaRegistro implements SistemaRegistroInterface {
         this.crianca = new ArrayList<>();
     }
 
-    public void cadastraRes(RegistroCrianca novaCrianca) {
-        this.registroCriancas.add(novaCrianca);
-    }
-
 
     public void cadastraCri(Crianca crianca) {
         this.crianca.add(crianca);

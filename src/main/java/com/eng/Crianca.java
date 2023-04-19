@@ -3,7 +3,6 @@ package com.eng;
 public class Crianca extends RegistroCrianca {
     private String nome;
     private String id;
-    private RegistroCrianca registroCrianca;
 
     public Crianca(String nome, String id,String doenca, String medicacoes) {
         super(doenca, medicacoes);
@@ -19,9 +18,6 @@ public class Crianca extends RegistroCrianca {
     }
     public String getId() {
         return id;
-    }
-    public void setId(String id) {
-        this.id = id;
     }
 
 }
