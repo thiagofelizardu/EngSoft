@@ -29,7 +29,8 @@ public class Main {
                 case 2:
                     String criancaPesq = JOptionPane.showInputDialog("Digite o id da criança que deseja pesquisar");
                     Crianca crincaAchada = sistema.listarRegis(criancaPesq);
-                    JOptionPane.showMessageDialog(null,"Dados da criança pesquisada com o ID:"+crincaAchada.getId()+"\n" +crincaAchada.toString());
+                    JOptionPane.showMessageDialog(null,"Dados da criança pesquisada com o Nome: "
+                            + crincaAchada.getNome()+ " e com o ID: "+crincaAchada.getId()+"\n" +crincaAchada.toString());
                     break;
                 case 3:
                     sair = true;

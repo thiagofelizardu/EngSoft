@@ -21,7 +21,6 @@ public class RegistroCrianca {
         return "RegistroCrianca{" +
                 "doenca='" + doenca + '\'' +
                 ", medicacoes='" + medicacoes + '\'' +
-
                 '}';
     }
 }
