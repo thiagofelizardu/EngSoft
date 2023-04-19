@@ -27,10 +27,8 @@ public class Main {
                             "\n 1 -- Cadastrar Usuario"
                             + "\n 2 -- Listar Dados do Usuario"
                             + "\n 3 -- sair"));
-                            
             switch (opc) {
                 case 1:
-
                     SimpleDateFormat formDate = new SimpleDateFormat("dd/MM/yyyy");
                     String nomeCrianca = JOptionPane.showInputDialog("Digite o nome da criaça");
                     String idCrianca = JOptionPane.showInputDialog("Digite o id da crianca");

@@ -15,7 +15,7 @@ public class RegistroCrianca {
     public String toString() {
         return "\nRegistros da Crianca\n" +
                 "Doencas: " + doenca + "\n" +
-                "Medicacoes: " + medicacoes + '\'';
+                "Medicacoes: " + medicacoes;
     }
 }
 
