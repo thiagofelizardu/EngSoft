@@ -6,6 +6,7 @@ import javafx.util.converter.LocalDateStringConverter;
 import javax.swing.*;
 import javax.xml.crypto.Data;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -13,11 +14,11 @@ import java.time.format.DateTimeFormatterBuilder;
 import java.util.Date;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         SistemaRegistroInterface sistema = new SistemaRegistro();
-
+        ImageIcon icon = new ImageIcon("C:\\Users\\thiag\\Documentos\\GitHub\\EngSoft\\icon.png");
         JOptionPane.showMessageDialog(null, "Sistema de Historico de Saúde Infaltil", "Bem Vindo",
-                JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.INFORMATION_MESSAGE,icon);
 
         boolean sair = false;
         while (!sair) {
@@ -26,7 +27,7 @@ public class Main {
                             "\n 1 -- Cadastrar Usuario"
                             + "\n 2 -- Listar Dados do Usuario"
                             + "\n 3 -- sair"));
-
+                            
             switch (opc) {
                 case 1:
 
@@ -48,8 +49,8 @@ public class Main {
                 case 2:
                     String criancaPesq = JOptionPane.showInputDialog("Digite o id da criança que deseja pesquisar");
                     Crianca crincaAchada = sistema.listarRegis(criancaPesq);
-                    JOptionPane.showMessageDialog(null, "Criança pesquisada\n " + "Nome: "
-                            + crincaAchada.getNome() + " de ID: " + crincaAchada.getId() + "\n" + "Data de Nacimento :"
+                    JOptionPane.showMessageDialog(null, "Criança pesquisada\n" + "Nome: "
+                            + crincaAchada.getNome() + " e ID: " + crincaAchada.getId() + "\n" + "Data de Nacimento :"
                             + crincaAchada.getDataNascimento() + "\n" + crincaAchada.toString());
                     break;
                 case 3:
