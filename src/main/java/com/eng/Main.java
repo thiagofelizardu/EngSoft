@@ -2,10 +2,13 @@ package com.eng;
 
 
 import javafx.scene.input.DataFormat;
+import javafx.util.converter.LocalDateStringConverter;
 
 import javax.swing.*;
 import javax.xml.crypto.Data;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.util.Date;
 
 public class Main {
@@ -26,9 +29,10 @@ public class Main {
 
             switch (opc) {
                 case 1:
+                    DateTimeFormatter fmt1=DateTimeFormatter.ofPattern("dd/MM/yyyy");
                     String nomeCrianca = JOptionPane.showInputDialog("Digite o nome da criaça");
                     String idCrianca = JOptionPane.showInputDialog("Digite o id da crianca");
-                    LocalDate dataNas = LocalDate.parse(JOptionPane.showInputDialog("Digite a data de nascimento da creiança\nFormato Ano-mes-dia"));
+                    LocalDate dataNas = LocalDate.parse(JOptionPane.showInputDialog("Digite a data de Nascimento\n Formato Ano-mes-dia"));
                     JOptionPane.showMessageDialog(null,"Criança Cadastrada!","Atenção",JOptionPane.DEFAULT_OPTION);
                     JOptionPane.showMessageDialog(null,"Agora vamos adicionar algumas informações dessa Criança","Atenção!!!",JOptionPane.INFORMATION_MESSAGE);
                     String doencaCrianca = JOptionPane.showInputDialog("Digite a Doenca\nSe tiver mais de uma separe com virgula ','");
