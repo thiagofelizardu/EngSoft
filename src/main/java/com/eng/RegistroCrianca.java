@@ -15,7 +15,6 @@ public class RegistroCrianca {
         this.medicacoes = medicacoes;
     }
 
-
     @Override
     public String toString() {
         return "Registro da Crianca:\n" +
