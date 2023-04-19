@@ -18,10 +18,9 @@ public class RegistroCrianca {
 
     @Override
     public String toString() {
-        return "RegistroCrianca{" +
+        return "Registro da Crianca:\n" +
                 "doenca='" + doenca + '\'' +
-                ", medicacoes='" + medicacoes + '\'' +
-                '}';
+                ", medicacoes='" + medicacoes + '\'';
     }
 }
 
