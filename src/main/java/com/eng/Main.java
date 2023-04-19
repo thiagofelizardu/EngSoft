@@ -29,7 +29,7 @@ public class Main {
 
             switch (opc) {
                 case 1:
-                    DateTimeFormatter fmt1=DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
                     String nomeCrianca = JOptionPane.showInputDialog("Digite o nome da criaça");
                     String idCrianca = JOptionPane.showInputDialog("Digite o id da crianca");
                     LocalDate dataNas = LocalDate.parse(JOptionPane.showInputDialog("Digite a data de Nascimento\n Formato Ano-mes-dia"));
@@ -44,11 +44,12 @@ public class Main {
                 case 2:
                     String criancaPesq = JOptionPane.showInputDialog("Digite o id da criança que deseja pesquisar");
                     Crianca crincaAchada = sistema.listarRegis(criancaPesq);
-                    JOptionPane.showMessageDialog(null,"Criança pesquisada\n "+"Nome:"
-                            + crincaAchada.getNome()+ "e ID: "+crincaAchada.getId()+"\n"+"Data de Nacimento :"+crincaAchada.getDataNascimento()+"\n"+ crincaAchada.toString());
+                    JOptionPane.showMessageDialog(null,"Criança pesquisada\n "+"Nome: "
+                            + crincaAchada.getNome()+ " de ID: "+crincaAchada.getId()+"\n"+"Data de Nacimento :"+crincaAchada.getDataNascimento()+"\n"+ crincaAchada.toString());
                     break;
                 case 3:
                     sair = true;
+                    JOptionPane.showMessageDialog(null,"Fim do programa","Atenção",JOptionPane.ERROR_MESSAGE);
                     break;
             }
 
