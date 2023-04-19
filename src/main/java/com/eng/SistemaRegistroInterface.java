@@ -6,5 +6,4 @@ public interface SistemaRegistroInterface {
 
     Crianca listarRegis(String id);
 
-
 }
