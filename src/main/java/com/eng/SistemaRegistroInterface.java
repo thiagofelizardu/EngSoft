@@ -4,6 +4,6 @@ public interface SistemaRegistroInterface {
 
     void cadastraCri(Crianca crianca);
 
-    Crianca listarRegis(String id);
+    Crianca listarRegis(String id)throws CriancaNaoExisteExecption;
 
 }

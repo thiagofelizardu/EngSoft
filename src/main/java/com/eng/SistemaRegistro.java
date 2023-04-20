@@ -18,12 +18,12 @@ public class SistemaRegistro implements SistemaRegistroInterface {
         this.crianca.add(crianca);
     }
 
-    public Crianca listarRegis(String id){
+    public Crianca listarRegis(String id) throws CriancaNaoExisteExecption {
         for(Crianca c: this.crianca){
             if (c.getId().equals(id))
                 return c;
         }
-        return null;
+        throw new CriancaNaoExisteExecption("Não Existe Criança com esse ID!");
     }
 
 

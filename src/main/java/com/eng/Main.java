@@ -14,7 +14,7 @@ import java.time.format.DateTimeFormatterBuilder;
 import java.util.Date;
 
 public class Main {
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) throws ParseException,CriancaNaoExisteExecption {
         SistemaRegistroInterface sistema = new SistemaRegistro();
         ImageIcon icon = new ImageIcon("C:\\Users\\thiag\\Documentos\\GitHub\\EngSoft\\icon.png");
         JOptionPane.showMessageDialog(null, "Sistema de Historico de Saúde Infaltil", "Bem Vindo",
@@ -44,11 +44,15 @@ public class Main {
                     sistema.cadastraCri(crianca);
                     break;
                 case 2:
-                    String criancaPesq = JOptionPane.showInputDialog("Digite o id da criança que deseja pesquisar");
-                    Crianca crincaAchada = sistema.listarRegis(criancaPesq);
-                    JOptionPane.showMessageDialog(null, "Criança pesquisada\n" + "Nome: "
-                            + crincaAchada.getNome() + " e ID: " + crincaAchada.getId() + "\n" + "Data de Nacimento :"
-                            + crincaAchada.getDataNascimento() + "\n" + crincaAchada.toString());
+                    try {
+                        String criancaPesq = JOptionPane.showInputDialog("Digite o id da criança que deseja pesquisar");
+                        Crianca crincaAchada = sistema.listarRegis(criancaPesq);
+                        JOptionPane.showMessageDialog(null, "Criança pesquisada\n" + "Nome: "
+                                + crincaAchada.getNome() + " e ID: " + crincaAchada.getId() + "\n" + "Data de Nacimento :"
+                                + crincaAchada.getDataNascimento() + "\n" + crincaAchada.toString());
+                    }catch (CriancaNaoExisteExecption naoExisteExecption){
+                        JOptionPane.showMessageDialog(null,naoExisteExecption.getMessage());
+                    }
                     break;
                 case 3:
                     sair = true;
