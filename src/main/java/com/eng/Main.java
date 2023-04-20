@@ -32,6 +32,7 @@ public class Main {
                     SimpleDateFormat formDate = new SimpleDateFormat("dd/MM/yyyy");
                     String nomeCrianca = JOptionPane.showInputDialog("Digite o nome da criaça");
                     String idCrianca = JOptionPane.showInputDialog("Digite o id da crianca");
+
                     String dataNas = JOptionPane.showInputDialog("Digite a data de Nascimento\n");
                     JOptionPane.showMessageDialog(null, "Criança Cadastrada!", "Atenção", JOptionPane.DEFAULT_OPTION);
                     JOptionPane.showMessageDialog(null, "Agora vamos adicionar algumas informações dessa Criança",

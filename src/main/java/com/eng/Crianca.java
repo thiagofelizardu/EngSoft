@@ -20,8 +20,6 @@ public class Crianca extends RegistroCrianca {
     public String getId() {
         return id;
     }
-
-
     public String getDataNascimento() {
         return dataNascimento;
     }
