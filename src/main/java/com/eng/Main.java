@@ -1,25 +1,13 @@
 package com.eng;
-
-import javafx.scene.input.DataFormat;
-import javafx.util.converter.LocalDateStringConverter;
-
 import javax.swing.*;
-import javax.xml.crypto.Data;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
-import java.util.Date;
-
 public class Main {
     public static void main(String[] args) throws ParseException,CriancaNaoExisteExecption {
         SistemaRegistroInterface sistema = new SistemaRegistro();
         ImageIcon icon = new ImageIcon("C:\\Users\\thiag\\Documentos\\GitHub\\EngSoft\\icon.png");
         JOptionPane.showMessageDialog(null, "Sistema de Historico de Saúde Infaltil", "Bem Vindo",
                 JOptionPane.INFORMATION_MESSAGE,icon);
-
         boolean sair = false;
         while (!sair) {
             int opc = Integer.parseInt(JOptionPane.showInputDialog(
@@ -65,7 +53,6 @@ public class Main {
                     JOptionPane.showMessageDialog(null, "Fim do programa", "Atenção", JOptionPane.ERROR_MESSAGE);
                     break;
             }
-
         } // while
     }
 }

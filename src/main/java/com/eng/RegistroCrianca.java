@@ -1,10 +1,5 @@
 package com.eng;
-
-import java.util.ArrayList;
-
-
 public class RegistroCrianca {
-
     private String doenca;
     private String medicacoes;
     public RegistroCrianca(String doenca, String medicacoes) {
@@ -16,4 +11,3 @@ public class RegistroCrianca {
         return "Doencas: " + doenca + "\n" + "Medicacoes: " + medicacoes;
     }
 }
-
