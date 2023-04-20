@@ -33,7 +33,6 @@ public class Main {
                     String nomeCrianca = JOptionPane.showInputDialog("Digite o nome da criaça");
                     String idCrianca = JOptionPane.showInputDialog("Digite o id da crianca");
                     String dataNas = JOptionPane.showInputDialog("Digite a data de Nascimento\n");
-                    Date data = formDate.parse(dataNas);
                     JOptionPane.showMessageDialog(null, "Criança Cadastrada!", "Atenção", JOptionPane.DEFAULT_OPTION);
                     JOptionPane.showMessageDialog(null, "Agora vamos adicionar algumas informações dessa Criança",
                             "Atenção!!!", JOptionPane.INFORMATION_MESSAGE);
